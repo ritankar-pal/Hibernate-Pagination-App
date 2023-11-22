@@ -18,7 +18,7 @@
 			<tr>
 				<td></td>
 				<td>
-					<input type="button" value="generateReport"/>
+					<input type="submit" value="generateReport" name='s1'/>
 				</td>
 			</tr>
 		</table>

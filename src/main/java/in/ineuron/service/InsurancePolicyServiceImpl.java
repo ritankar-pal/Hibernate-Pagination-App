@@ -31,6 +31,7 @@ public class InsurancePolicyServiceImpl implements InsurancePolicyService {
 	public List<InsurancePolicyDTO> fetchPageData(int pageSize, int pageNo) {
 		
 		int startPosition = 0;
+		startPosition = (pageNo * pageSize) - pageSize;
 		
 		List<InsurancePolicyDTO> list = new ArrayList<>();
 		

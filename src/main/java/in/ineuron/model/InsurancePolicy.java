@@ -5,11 +5,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.NamedQuery;
+
 
 @Entity
+@NamedQuery(name = "GET_POLICIES_COUNT", query = "select count(*) from in.ineuron.model.InsurancePolicy")
+@NamedQuery(name = "GET_POLICIES", query = "from in.ineuron.model.InsurancePolicy")
 public class InsurancePolicy implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
+	static {
+		System.out.println("Insurance Policy .class file generated");
+	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
